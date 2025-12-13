@@ -106,7 +106,7 @@ def logs(doc_id):
     return jsonify(resp.get("Items", []))
 
 # ─── NEW: latest N records without docId ───────────────────────
-@app.route("/logs/all")
+@app.route("/logs/alll")
 def logs_all():
     limit = int(request.args.get("limit", "100"))
     resp  = tbl_logs.scan(Limit=limit)
